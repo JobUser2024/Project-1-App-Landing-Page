@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap');
+
+/* General Styles */
+/* Custom Properties (CSS variables) */
+:root {
+    --primary--color: rgb(219, 4, 4);
+    --bg--color: linear-gradient(to bottom right, #b52b2b, #ff0a0a);
+    --grey: #cac7c7;
+}
+
+html {
+    /* FONT SIZE 10px */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Font Size 16px */
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    object-fit: cover;
+}
+
+article {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    padding: 5rem 0;
+}
+
+* {
+    /* Universal Styles */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+/* Header Section */
+header {
+    background: var(--primary--color);
+    color: #fff;
+    text-align: center; /* Center the text */
+    font-size: 1.5rem;
+    font-weight: 300;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Add some padding */
+}
+
+#logo {
+    display: block; /* Show the logo */
+    font-size: 1.8rem; /* Adjust logo font size if needed */
+}
+
+nav {
+    flex-grow: 1; /* Allow nav to take available space */
+}
+
+nav ul {
+    display: flex; /* Use flexbox for nav items */
+    justify-content: center; /* Center the navigation items */
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between navigation items */
+}
+
+nav a {
+    color: #fff;
+    padding: 0.5em 1em; /* Adjust padding for links */
+    font-weight: 500;
+    font-family: "Jost", sans-serif;
+    border-radius: 5px; /* Rounded corners for hover effect */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+}
+
+/* Hero Section */
+#hero {
+    padding-top: 14rem;
+    color: #fff;
+    background: var(--bg--color);
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+#hero p {
+    font-size: 1.4rem;
+    margin-top: 1em;
+    font-weight: 300;
+}
+
+button {
+    border-radius: 15px;
+    padding: 0.8rem;
+    margin: 15px;
+    font-family: inherit;
+    border: 1px solid transparent;
+    border-color: #fff;
+    background: var(--bg--color);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+button:hover {
+    background: linear-gradient(to bottom right, #b52b2b, #ff0a0a);
+    transform: translateY(2px);
+}
+
+/* Features Section */
+h2, h3, h4 {
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 0.2rem;
+    margin-bottom: 1em;
+}
+
+.features-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 100;
+}
+
+.features-card {
+    font-size: 1.5rem;
+    border: 1px solid #fff;
+    background-color: #f0f6ff;
+    padding: 1.5rem;
+    margin: 1.4rem;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.features-card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.features-icon {
+    font-size: 2.3rem;
+    width: 60px;
+    margin: auto;
+    text-align: center;
+    background: var(--bg--color);
+    border-radius: 45px;
+    color: #fff;
+    padding: 13px;
+}
+
+h6 {
+    font-size: 1.8rem;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+/* Download Section */
+#download div p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--grey);
+}
+
+.download-container {
+    background: var(--bg--color);
+    border-radius: 7px;
+    margin: 20px;
+}
+
+.btn-download-container {
+    display: flex;
+    color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px;
+}
+
+.fa-apple, .fa-android {
+    font-size: 25px;
+}
+
+/* Content Section */
+form input, textarea {
+    width: 94%;
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    color: #252525;
+    margin: 10px 0;
+    padding: 4px;
+    font-family: inherit;
+    font-size: 1.5rem;
+}
+
+textarea {
+    height: 150px;
+}
+
+form input:focus, textarea:focus {
+    outline: 2px solid #f83d3d;
+}
+
+#btn-submit {
+    margin: 15px;
+    padding: 15px;
+}
+
+/* Footer Section */
+footer {
+    background: var(--bg--color);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 200;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 10px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* Media Query - Adjustments for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .features-card {
+        width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+nav {
+    flex-grow: 1; /* Allow nav to take available space */
+}
+
+nav ul {
+    display: flex; /* Use flexbox for nav items */
+    justify-content: flex-end; /* Align items to the right */
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between navigation items */
+}
+
+header {
+    background: var(--primary--color);
+    color: #fff;
+    text-align: center; /* Center the text */
+    font-size: 1.2rem; /* Adjusted header font size */
+    font-weight: 300;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+    padding: 5px 20px; /* Reduced padding for header */
+}
+
+#logo {
+    display: block; /* Show the logo */
+    font-size: 1.5rem; /* Adjusted logo font size */
+}
+
+img {
+    width: 80%; /* Adjust this percentage as needed to make the image smaller */
+    max-width: 300px; /* Set a maximum width if desired */
+    border-radius: 5px;
+    display: block;
+    object-fit: cover;
+}
+
+img {
+    width: 80%; /* Adjust this percentage as needed to make the image smaller */
+    max-width: 300px; /* Set a maximum width if desired */
+    border-radius: 5px;
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image */
+    object-fit: cover;
+}
+
+.features-section {
+    text-align: center; /* Center the heading and the cards */
+    margin: 2rem 0; /* Add some space above and below the section */
+}
+
+.features-cards {
+    display: flex; /* Use flexbox to arrange items */
+    justify-content: center; /* Center the cards horizontally */
+    flex-wrap: wrap; /* Allow wrapping of cards to next line on smaller screens */
+    gap: 2rem; /* Space between cards */
+}
+
+.features-card {
+    background-color: #f0f6ff; /* Background color for the card */
+    border: 1px solid #fff; /* Border color */
+    border-radius: 20px; /* Rounded corners */
+    padding: 1.5rem; /* Padding inside the card */
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+    min-width: 250px; /* Minimum width for the card */
+    max-width: 300px; /* Maximum width for the card */
+    transition: transform 0.5s; /* Transition for hover effect */
+}
+
+.features-card:hover {
+    transform: translateY(-5px); /* Raise the card on hover */
+}
